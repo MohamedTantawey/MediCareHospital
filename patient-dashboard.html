@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - MediCare Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">Medi<span>Care</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html#departments">Departments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1 class="welcome-message" id="welcomeMessage">Welcome, Patient!</h1>
+                <div class="user-info" id="userInfo">
+                    <!-- User info will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="stat-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3 id="upcomingAppointments">0</h3>
+                    <p>Upcoming Appointments</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-history"></i>
+                    <h3 id="appointmentHistory">0</h3>
+                    <p>Appointment History</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3 id="favoriteDoctors">0</h3>
+                    <p>Favorite Doctors</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Book Appointment</h2>
+                </div>
+                <div class="card-body">
+                    <form id="appointmentForm" class="appointment-form">
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <select id="department" class="form-control" required>
+                                <option value="">Select Department</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor">Doctor</label>
+                            <select id="doctor" class="form-control" required>
+                                <option value="">Select Doctor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Appointment Date</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Appointment Time</label>
+                            <input type="time" id="time" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">My Appointments</h2>
+                </div>
+                <div class="card-body">
+                    <div id="appointmentsList">
+                        <!-- Appointments will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MediCare Hospital</h3>
+                    <p>Providing quality healthcare services with compassion and excellence since 1990.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="index.html#departments">Departments</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Medical Street, Health City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@medicare.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MediCare Hospital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
